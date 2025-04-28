@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import Header from '@/components/Header';
 import ApiKeyModal from '@/components/ApiKeyModal';
 import { generateAwkwardAdvice } from '@/utils/aiUtils';
@@ -94,7 +94,7 @@ const AwkwardSituation = () => {
           <div className="mb-6">
             <Textarea
               value={situation}
-              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setSituation(e.target.value)}
+              onChange={(e) => setSituation(e.target.value)}
               placeholder="Describe the awkward situation..."
               className="w-full h-40 rounded-lg bg-secondary/30 border border-white/10 p-3 text-white focus:ring-2 focus:ring-love/50 focus:outline-none"
             />
