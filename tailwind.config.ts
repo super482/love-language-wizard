@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,15 +53,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				love: {
+					DEFAULT: '#E91E63',
+					light: '#F48FB1',
+					dark: '#C2185B',
+					foreground: '#FFFFFF'
+				},
+				magic: {
+					DEFAULT: '#9C27B0',
+					light: '#CE93D8',
+					dark: '#7B1FA2',
+					foreground: '#FFFFFF'
 				}
 			},
 			borderRadius: {
@@ -84,11 +87,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'sparkle': {
+					'0%, 100%': { 
+						opacity: '0',
+						transform: 'scale(0.5) rotate(0deg)'
+					},
+					'50%': { 
+						opacity: '1',
+						transform: 'scale(1.2) rotate(180deg)'
+					},
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'sparkle': 'sparkle 1.5s ease-in-out infinite'
 			}
 		}
 	},
